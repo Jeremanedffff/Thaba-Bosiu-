@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Map of Thaba Bosiu & Thaba Bosiu Cultural Village</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8d4b0 100%);
+            color: #2c1810;
+        }
+        
+        .map-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 30px;
+            border: 3px solid #8B4513;
+        }
+        
+        .title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 18px;
+            font-style: italic;
+            color: #1e3a8a;
+            margin-bottom: 30px;
+        }
+        
+        .map-svg {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #654321;
+            border-radius: 10px;
+            background: #f9f5f0;
+        }
+        
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f5f5dc;
+            border-radius: 10px;
+            border: 1px solid #8B4513;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #333;
+            border-radius: 3px;
+        }
+        
+        .info-box {
+            background: #f5f5dc;
+            border: 2px solid #1e3a8a;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .info-box h3 {
+            color: #1e3a8a;
+            margin-top: 0;
+        }
+        
+        .info-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .info-box li {
+            margin: 5px 0;
+        }
+        
+        .label {
+            font-size: 12px;
+            font-weight: bold;
+            fill: #2c1810;
+        }
+        
+        .small-label {
+            font-size: 10px;
+            fill: #4a2c1a;
+        }
+        
+        @media print {
+            body { background: white; }
+            .map-container { box-shadow: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="map-container">
+        <div class="title">HISTORICAL MAP OF THABA BOSIU & THABA BOSIU CULTURAL VILLAGE</div>
+        <div class="subtitle">Lesotho - Mountain Fortress of Moshoeshoe I (1824-1868)</div>
+        
+        <svg class="map-svg" viewBox="0 0 800 600">
+            <!-- Background -->
+            <rect width="800" height="600" fill="#f9f5f0"/>
+            
+            <!-- Grid lines for reference -->
+            <defs>
+                <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+                    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#e0d5c7" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="800" height="600" fill="url(#grid)"/>
+            
+            <!-- Main Thaba Bosiu Plateau -->
+            <polygon points="150,200 550,200 580,250 580,450 550,500 150,500 120,450 120,250" 
+                     fill="#D2B48C" stroke="#8B7355" stroke-width="4" opacity="0.9"/>
+            
+            <!-- Cliff indicators -->
+            <rect x="110" y="250" width="40" height="200" fill="#8B7355" opacity="0.6"/>
+            <rect x="580" y="250" width="40" height="200" fill="#8B7355" opacity="0.6"/>
+            <rect x="150" y="180" width="400" height="40" fill="#8B7355" opacity="0.6"/>
+            <rect x="150" y="500" width="400" height="40" fill="#8B7355" opacity="0.6"/>
+            
+            <!-- Six Historical Passes -->
+            <!-- Khubelu Pass -->
+            <line x1="120" y1="350" x2="80" y2="350" stroke="#654321" stroke-width="3" stroke-dasharray="5,5"/>
+            <text x="70" y="355" class="small-label" text-anchor="end">Khubelu Pass</text>
+            
+            <!-- Ramaseli Pass -->
+            <line x1="120" y1="300" x2="80" y2="300" stroke="#654321" stroke-width="3" stroke-dasharray="5,5"/>
+            <text x="70" y="305" class="small-label" text-anchor="end">Ramaseli Pass</text>
+            
+            <!-- Maebeng Pass -->
+            <line x1="350" y1="200" x2="350" y2="160" stroke="#654321" stroke-width="3" stroke-dasharray="5,5"/>
+            <text x="350" y="150" class="small-label" text-anchor="middle">Maebeng Pass</text>
+            
+            <!-- Mokachane Pass -->
+            <line x1="450" y1="200" x2="450" y2="160" stroke="#654321" stroke-width="3" stroke-dasharray="5,5"/>
+            <text x="450" y="150" class="small-label" text-anchor="middle">Mokachane Pass</text>
+            
+            <!-- Makara Pass -->
+            <line x1="580" y1="350" x2="620" y2="350" stroke="#654321" stroke-width="3" stroke-dasharray="5,5"/>
+            <text x="630" y="355" class="small-label">Makara Pass</text>
+            
+            <!-- Rahebe Pass -->
+            <line x1="580" y1="400" x2="620" y2="400" stroke="#654321" stroke-width="3" stroke-dasharray="5,5"/>
+            <text x="630" y="405" class="small-label">Rahebe Pass</text>
+            
+            <!-- Eight Natural Springs -->
+            <circle cx="200" cy="280" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="200" y="265" class="small-label" text-anchor="middle">Spring 1</text>
+            
+            <circle cx="280" cy="320" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="280" y="305" class="small-label" text-anchor="middle">Spring 2</text>
+            
+            <circle cx="360" cy="280" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="360" y="265" class="small-label" text-anchor="middle">Spring 3</text>
+            
+            <circle cx="440" cy="320" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="440" y="305" class="small-label" text-anchor="middle">Spring 4</text>
+            
+            <circle cx="240" cy="380" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="240" y="365" class="small-label" text-anchor="middle">Spring 5</text>
+            
+            <circle cx="320" cy="420" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="320" y="405" class="small-label" text-anchor="middle">Spring 6</text>
+            
+            <circle cx="400" cy="380" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="400" y="365" class="small-label" text-anchor="middle">Spring 7</text>
+            
+            <circle cx="480" cy="420" r="8" fill="#4682B4" stroke="navy" stroke-width="2"/>
+            <text x="480" y="405" class="small-label" text-anchor="middle">Spring 8</text>
+            
+            <!-- Moshoeshoe I's Stone Buildings -->
+            <rect x="180" y="460" width="60" height="30" fill="#8B4513" stroke="black" stroke-width="2"/>
+            <text x="210" y="455" class="small-label" text-anchor="middle">Moshoeshoe's House</text>
+            
+            <rect x="280" y="460" width="50" height="30" fill="#8B4513" stroke="black" stroke-width="2"/>
+            <text x="305" y="455" class="small-label" text-anchor="middle">Building 2</text>
+            
+            <rect x="380" y="460" width="50" height="30" fill="#8B4513" stroke="black" stroke-width="2"/>
+            <text x="405" y="455" class="small-label" text-anchor="middle">Building 3</text>
+            
+            <rect x="160" y="380" width="50" height="30" fill="#8B4513" stroke="black" stroke-width="2"/>
+            <text x="185" y="375" class="small-label" text-anchor="middle">Building 4</text>
+            
+            <circle cx="500" cy="395" r="20" fill="#8B4513" stroke="black" stroke-width="2"/>
+            <text x="500" y="370" class="small-label" text-anchor="middle">Cylindrical Building</text>
+            
+            <!-- Thaba Bosiu Cultural Village -->
+            <rect x="50" y="50" width="200" height="100" rx="10" fill="#DEB887" stroke="#B8860B" stroke-width="3" opacity="0.8"/>
+            <text x="150" y="80" class="label" text-anchor="middle" font-weight="bold">THABA BOSIU</text>
+            <text x="150" y="100" class="label" text-anchor="middle" font-weight="bold">CULTURAL VILLAGE</text>
+            
+            <!-- Cultural Village Features -->
+            <rect x="60" y="110" width="80" height="25" fill="white" stroke="#333" stroke-width="1" opacity="0.9"/>
+            <text x="100" y="127" class="small-label" text-anchor="middle">Visitor Centre</text>
+            
+            <rect x="150" y="110" width="80" height="25" fill="white" stroke="#333" stroke-width="1" opacity="0.9"/>
+            <text x="190" y="127" class="small-label" text-anchor="middle">Museum</text>
+            
+            <rect x="60" y="60" width="80" height="25" fill="white" stroke="#333" stroke-width="1" opacity="0.9"/>
+            <text x="100" y="77" class="small-label" text-anchor="middle">Restaurant</text>
+            
+            <rect x="150" y="60" width="80" height="25" fill="white" stroke="#333" stroke-width="1" opacity="0.9"/>
+            <text x="190" y="77" class="small-label" text-anchor="middle">Hotel</text>
+            
+            <!-- Mount Qiloane (conical landmark) -->
+            <polygon points="680,300 700,250 720,300" fill="#228B22" stroke="darkgreen" stroke-width="3" opacity="0.8"/>
+            <text x="700" y="235" class="small-label" text-anchor="middle">Mount Qiloane</text>
+            <text x="700" y="220" class="small-label" text-anchor="middle">(Inspiration for</text>
+            <text x="700" y="205" class="small-label" text-anchor="middle">Basotho Hat)</text>
+            
+            <!-- Main Access Roads -->
+            <line x1="350" y1="50" x2="350" y2="160" stroke="#654321" stroke-width="4"/>
+            <text x="350" y="105" class="small-label" text-anchor="middle" transform="rotate(-90 350 105)">Access Road from Maseru</text>
+            
+            <line x1="30" y1="100" x2="750" y2="100" stroke="#654321" stroke-width="4"/>
+            <text x="400" y="95" class="small-label" text-anchor="middle">A2 Main Road</text>
+            
+            <line x1="620" y1="350" x2="680" y2="350" stroke="#654321" stroke-width="3"/>
+            <text x="650" y="340" class="small-label" text-anchor="middle">Local Road</text>
+            
+            <!-- San Rock Art Site -->
+            <circle cx="450" cy="360" r="12" fill="orange" stroke="red" stroke-width="2" opacity="0.8"/>
+            <text x="450" y="340" class="small-label" text-anchor="middle">San Rock Art Site</text>
+            
+            <!-- Historical Battle Sites -->
+            <polygon points="70,350 80,330 90,350" fill="red" stroke="darkred" stroke-width="2"/>
+            <text x="80" y="320" class="small-label" text-anchor="middle">Mzilikazi Attack</text>
+            <text x="80" y="305" class="small-label" text-anchor="middle">Site (1826)</text>
+            
+            <polygon points="640,400 650,380 660,400" fill="red" stroke="darkred" stroke-width="2"/>
+            <text x="650" y="370" class="small-label" text-anchor="middle">Boer Siege</text>
+            <text x="650" y="355" class="small-label" text-anchor="middle">Position (1865)</text>
+            
+            <polygon points="90,300 100,280 110,300" fill="red" stroke="darkred" stroke-width="2"/>
+            <text x="100" y="270" class="small-label" text-anchor="middle">Wepener's Fall</text>
+            <text x="100" y="255" class="small-label" text-anchor="middle">Site</text>
+            
+            <!-- Scale Bar -->
+            <line x1="600" y1="550" x2="700" y2="550" stroke="black" stroke-width="3"/>
+            <line x1="600" y1="545" x2="600" y2="555" stroke="black" stroke-width="2"/>
+            <line x1="700" y1="545" x2="700" y2="555" stroke="black" stroke-width="2"/>
+            <text x="650" y="570" class="small-label" text-anchor="middle">1 km</text>
+            <text x="650" y="540" class="small-label" text-anchor="middle">Scale</text>
+            
+            <!-- Compass Rose -->
+            <g transform="translate(750, 50)">
+                <line x1="0" y1="-20" x2="0" y2="20" stroke="black" stroke-width="2"/>
+                <line x1="-20" y1="0" x2="20" y2="0" stroke="black" stroke-width="2"/>
+                <text x="0" y="-25" class="label" text-anchor="middle" font-weight="bold">N</text>
+                <text x="25" y="5" class="small-label" text-anchor="middle">E</text>
+                <text x="0" y="35" class="small-label" text-anchor="middle">S</text>
+                <text x="-25" y="5" class="small-label" text-anchor="middle">W</text>
+            </g>
+        </svg>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #D2B48C;"></div>
+                <span>Thaba Bosiu Plateau</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #4682B4;"></div>
+                <span>Natural Springs</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #8B4513;"></div>
+                <span>Historical Buildings</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #DEB887;"></div>
+                <span>Cultural Village</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #654321;"></div>
+                <span>Roads</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: red;"></div>
+                <span>Battle Sites</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: orange;"></div>
+                <span>Rock Art Site</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #228B22;"></div>
+                <span>Mount Qiloane</span>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h3>Key Historical Facts:</h3>
+            <ul>
+                <li><strong>Established 1824</strong> by Moshoeshoe I as the capital of the Basotho nation</li>
+                <li><strong>Natural Fortress:</strong> Flat-topped sandstone plateau rising 106m from surrounding valley</li>
+                <li><strong>Eight Natural Springs:</strong> Provided water during lengthy sieges</li>
+                <li><strong>Six Strategic Passes:</strong> Khubelu, Ramaseli, Maebeng, Mokachane, Makara and Rahebe</li>
+                <li><strong>Never Conquered:</strong> Successfully withstood attacks by Mzilikazi (1826) and Boer forces (1865-1866)</li>
+                <li><strong>National Monument:</strong> Declared in 1967, now a UNESCO World Heritage Site candidate</li>
+                <li><strong>Cultural Village:</strong> Modern facility showcasing traditional Basotho culture and history</li>
+            </ul>
+            
+            <h3>Historical Significance:</h3>
+            <p>Thaba Bosiu served as the political and military center of the Basotho kingdom for over 40 years. From this strategic mountain fortress, Moshoeshoe I unified diverse Sotho groups and established the foundation of modern Lesotho. The mountain's natural defenses and reliable water sources made it virtually impregnable, allowing the Basotho nation to survive the turbulent period of the Lifaqane wars and European colonial expansion.</p>
+        </div>
+    </div>
+</body>
+</html>
